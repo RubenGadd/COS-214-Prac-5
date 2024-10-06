@@ -77,17 +77,17 @@ void Prac_5_Class_Diagram::HousePart::performAction() {
 	throw "Not yet implemented";
 }
 
-void Prac_5_Class_Diagram::HousePart::getChildren(int index) {
-	// TODO - implement HousePart::getChildren
-	throw "Not yet implemented";
+Component * Prac_5_Class_Diagram::HousePart::getChildren(int index) {
+	if(index >= children.size() || index < 0) return nullptr;
+	auto it = children.begin(); 
+	advance(it, index); 
+	return *it;
 }
 
 void Prac_5_Class_Diagram::HousePart::addChildren(Component* component) {
-	// TODO - implement HousePart::addChildren
-	throw "Not yet implemented";
+	children.push_back(component);
 }
 
 void Prac_5_Class_Diagram::HousePart::removeChildren(Component* component) {
-	// TODO - implement HousePart::removeChildren
-	throw "Not yet implemented";
+	children.remove(component);
 }

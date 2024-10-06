@@ -18,7 +18,7 @@ namespace Prac_5_Class_Diagram {
 
 		virtual void performAction() = 0;
 
-		virtual void getChildren(int index);
+		virtual Component * getChildren(int index);
 
 		virtual void addChildren(Component* component);
 

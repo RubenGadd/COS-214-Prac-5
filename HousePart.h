@@ -2,9 +2,14 @@
 #define HOUSEPART_H
 
 #include "Component.h"
+#include "Device.h"
+#include "Light.h"
+#include "DoorLock.h"
+#include "Thermostat.h"
 #include <list>
 
 using namespace std;
+using namespace Prac_5_Class_Diagram;
 
 namespace Prac_5_Class_Diagram {
 	class HousePart : public Component {
@@ -18,7 +23,7 @@ namespace Prac_5_Class_Diagram {
 
 		void performAction();
 
-		void getChildren(int index);
+		Component* getChildren(int index);
 
 		void addChildren(Component* component);
 
