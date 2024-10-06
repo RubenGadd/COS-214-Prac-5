@@ -20,9 +20,9 @@ namespace Prac_5_Class_Diagram {
 
 		virtual void getChildren(int index);
 
-		virtual void addChildren(Component component);
+		virtual void addChildren(Component* component);
 
-		virtual void removeChildren(Component component);
+		virtual void removeChildren(Component* component);
 	};
 }
 

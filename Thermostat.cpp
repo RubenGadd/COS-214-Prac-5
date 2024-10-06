@@ -1,5 +1,7 @@
 #include "Thermostat.h"
 
+Prac_5_Class_Diagram::Thermostat::Thermostat():Device("Thermostat"){}
+
 string Prac_5_Class_Diagram::Thermostat::getStatus() {
 	if(Device::getStatus() == "Active"){
 		return "On";

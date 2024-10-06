@@ -1,5 +1,7 @@
 #include "DoorLock.h"
 
+Prac_5_Class_Diagram::DoorLock::DoorLock():Device("DoorLock"){}
+
 string Prac_5_Class_Diagram::DoorLock::getStatus() {
 	if(Device::getStatus() == "Active"){
 		return "Locked";

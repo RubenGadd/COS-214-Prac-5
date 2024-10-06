@@ -11,6 +11,7 @@ namespace Prac_5_Class_Diagram {
 		Prac_5_Class_Diagram::Sensor* sensor;
 
 	public:
+		DoorLock();
 		string getStatus();
 
 		string getDeviceType();

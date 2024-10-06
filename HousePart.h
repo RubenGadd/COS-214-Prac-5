@@ -1,12 +1,17 @@
 #ifndef HOUSEPART_H
 #define HOUSEPART_H
 
+#include "Component.h"
+#include <list>
+
+using namespace std;
+
 namespace Prac_5_Class_Diagram {
-	class HousePart : Prac_5_Class_Diagram::Component {
+	class HousePart : public Component {
 
 	public:
-		Prac_5_Class_Diagram::Component* children;
-
+		list<Component*> children;
+		~HousePart();
 		string getStatus();
 
 		string getDeviceType();
@@ -15,9 +20,9 @@ namespace Prac_5_Class_Diagram {
 
 		void getChildren(int index);
 
-		void addChildren(Component component);
+		void addChildren(Component* component);
 
-		void removeChildren(Component component);
+		void removeChildren(Component* component);
 	};
 }
 

@@ -12,6 +12,7 @@ namespace Prac_5_Class_Diagram {
 		Prac_5_Class_Diagram::Sensor* sensor;
 
 	public:
+		Thermostat();
 		string getStatus();
 
 		string getDeviceType();
