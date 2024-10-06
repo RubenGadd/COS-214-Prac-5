@@ -1,8 +1,11 @@
 #ifndef THERMOSTAT_H
 #define THERMOSTAT_H
 
+#include "Device.h"
+#include "Thermometer.h"
+
 namespace Prac_5_Class_Diagram {
-	class Thermostat : Prac_5_Class_Diagram::Device {
+	class Thermostat : public Device {
 
 	private:
 		int* sensorState;
