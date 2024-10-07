@@ -9,14 +9,12 @@
 #include "LegacyThermostat.h"
 #include "DoorLock.h"
 
-namespace   {
-	class Inactive : public State {
 
-
+class Inactive : public State {
 	public:
 		Inactive();
 		void performAction(Device* device);
-	};
-}
+};
+
 
 #endif

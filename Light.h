@@ -5,19 +5,19 @@
 #include "MotionSensor.h"
 using namespace std;
 
-namespace   {
-	class Light : public Device {
+
+class Light : public Device {
 
 	private:
 		bool sensorState;
-		 MotionSensor* sensor;
+			MotionSensor* sensor;
 
 	public:
 		Light();
 		string getStatus();
 		string getDeviceType();
 		void update();
-	};
-}
+};
+
 
 #endif
