@@ -25,7 +25,7 @@ namespace Prac_5_Class_Diagram {
 
 		virtual string getStatus();
 
-		virtual void performAction() = 0;
+		void performAction(bool OnOff, string deviceType);
 
 		void setState(State * s);
 	};

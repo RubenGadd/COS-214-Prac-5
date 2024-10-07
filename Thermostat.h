@@ -22,11 +22,6 @@ namespace Prac_5_Class_Diagram {
 		/// @brief Accessor function for the name of a device
 		/// @return String value of the name of the device, for example "Thermostat"
 		string getDeviceType();
-
-		/// @brief Turns the thermostat off if it is on and turns it on if the device is off
-		void performAction();
-
-		/// @brief Update the sensor when the device state changes
 		void update();
 
 		/// @brief Accessor method for the legacy thermostat's temperature setting

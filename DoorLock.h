@@ -17,8 +17,6 @@ namespace Prac_5_Class_Diagram {
 
 		string getDeviceType();
 
-		void performAction();
-
 		void operation();
 
 		void update();

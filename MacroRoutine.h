@@ -1,19 +1,30 @@
 #ifndef MACROROUTINE_H
 #define MACROROUTINE_H
 
+#include <string>
+#include "Command.h"
+#include "TurnOffAllLights.h"
+#include "LockAllDoors.h"
+#include "HousePart.h"
+#include <list>
+
+using namespace std;
+
+
 namespace Prac_5_Class_Diagram {
 	class MacroRoutine {
 
 	private:
 		string name;
-		Vector<Prac_5_Class_Diagram::Command*> procedures;
+		list<Prac_5_Class_Diagram::Command*> procedures;
 
 	public:
-		void addProcedure();
+		MacroRoutine(string n);
+		void addProcedure(Command * command);
 
-		void removeProcedure();
+		void removeProcedure(Command * command);
 
-		void executeRoutine();
+		void executeRoutine(HousePart * room);
 	};
 }
 

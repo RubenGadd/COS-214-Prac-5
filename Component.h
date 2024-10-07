@@ -16,7 +16,9 @@ namespace Prac_5_Class_Diagram {
 
 		virtual string getDeviceType() = 0;
 
-		virtual void performAction() = 0;
+		virtual void performAction(bool OnOff, string deviceType) = 0;
+
+		string getName();
 
 		virtual Component * getChildren(int index);
 
