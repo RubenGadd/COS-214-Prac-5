@@ -1,11 +1,11 @@
 #include "Thermostat.h"
 
 /// @brief Construct Thermostat object and passes Thremostat string as device name into Device's constructor
-Prac_5_Class_Diagram::Thermostat::Thermostat():Device("Thermostat"){}
+Thermostat::Thermostat():Device("Thermostat"){}
 
 /// @brief Uses device's getStatus to get the name of the state veriable and returns a string giving the result but in terms of the device, eg Light's are On or Off
 /// @return Returns a string of the devices state
-string Prac_5_Class_Diagram::Thermostat::getStatus() {
+string Thermostat::getStatus() {
 	if(Device::getStatus() == "Active"){
 		return "On";
 	}else{
@@ -15,11 +15,11 @@ string Prac_5_Class_Diagram::Thermostat::getStatus() {
 
 /// @brief Returns the name of the device
 /// @return Returns a string which is the name of the device
-string Prac_5_Class_Diagram::Thermostat::getDeviceType() {
+string Thermostat::getDeviceType() {
 	return this->name;
 }
 
-void Prac_5_Class_Diagram::Thermostat::update() {
+void Thermostat::update() {
 	sensorState = this->thermometer->getState();
 
 	if(sensorState == tempSetting) {  //if the room is hot/cold enough
@@ -30,11 +30,11 @@ void Prac_5_Class_Diagram::Thermostat::update() {
 		this->performAction(true,"Thermostat");
 }
 
-int Prac_5_Class_Diagram::Thermostat::getTemperature() {
+int Thermostat::getTemperature() {
 	return tempSetting;
 }
 
-void Prac_5_Class_Diagram::Thermostat::setTemperature(int temp)
+void Thermostat::setTemperature(int temp)
 {
 	this->tempSetting = temp;
 }

@@ -1,6 +1,6 @@
 #include "Sensor.h"
 
-void Prac_5_Class_Diagram::Sensor::addDevice(Prac_5_Class_Diagram::Device* device) {
+void  Sensor::addDevice( Device* device) {
 
 	if(this->device != NULL) {
 		cout << "There is already a device added to this sensor, you have to remove it first" << endl;
@@ -11,12 +11,12 @@ void Prac_5_Class_Diagram::Sensor::addDevice(Prac_5_Class_Diagram::Device* devic
 	this->device = device;
 }
 
-void Prac_5_Class_Diagram::Sensor::removeDevice() {
+void  Sensor::removeDevice() {
 	cout << "Removing device from sensor" << endl;
 	this->device = NULL;
 }
 
-void Prac_5_Class_Diagram::Sensor::notifyDevice() {
+void  Sensor::notifyDevice() {
 	cout << "Notifying device..." << endl;
 	this->device->update();
 }

@@ -3,14 +3,19 @@
 
 #include "State.h"
 #include "Active.h"
+#include "Device.h"
+#include "Light.h"
+#include "Thermostat.h"
+#include "LegacyThermostat.h"
+#include "DoorLock.h"
 
-namespace Prac_5_Class_Diagram {
+namespace   {
 	class Inactive : public State {
 
 
 	public:
 		Inactive();
-		void performAction(Prac_5_Class_Diagram::Device* device);
+		void performAction(Device* device);
 	};
 }
 

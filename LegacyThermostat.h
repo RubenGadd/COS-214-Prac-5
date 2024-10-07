@@ -4,7 +4,7 @@
 #include <iostream>
 using namespace std;
 
-namespace Prac_5_Class_Diagram {
+namespace   {
 	class LegacyThermostat {
 	
 		private:

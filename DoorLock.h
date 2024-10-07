@@ -3,24 +3,26 @@
 
 #include "Device.h"
 #include "DoorSensor.h"
+#include "Active.h"
+#include "Inactive.h"
 
-namespace Prac_5_Class_Diagram {
-	class DoorLock : public Device {
 
-	private:
-		bool observerState;
-		Prac_5_Class_Diagram::DoorSensor* sensor;
+class DoorLock : public Device {
 
-	public:
-		DoorLock();
-		string getStatus();
+private:
+	bool observerState;
+		DoorSensor* sensor;
 
-		string getDeviceType();
+public:
+	DoorLock();
+	string getStatus();
 
-		void operation();
+	string getDeviceType();
 
-		void update();
-	};
-}
+	void operation();
+
+	void update();
+};
+
 
 #endif

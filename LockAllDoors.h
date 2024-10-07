@@ -3,8 +3,8 @@
 
 #include "Command.h"
 
-namespace Prac_5_Class_Diagram {
-	class LockAllDoors : public Prac_5_Class_Diagram::Command {
+namespace   {
+	class LockAllDoors : public  Command {
 
 
 	public:

@@ -5,13 +5,12 @@
 using namespace std;
 
 #include "HousePart.h"
-namespace Prac_5_Class_Diagram {
-	class Command {
+class Command {
 
 
-	public:
-		virtual void execute(HousePart * room) = 0;
-	};
-}
+public:
+	virtual void execute(HousePart * room) = 0;
+};
+
 
 #endif

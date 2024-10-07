@@ -5,12 +5,12 @@
 #include "MotionSensor.h"
 using namespace std;
 
-namespace Prac_5_Class_Diagram {
+namespace   {
 	class Light : public Device {
 
 	private:
 		bool sensorState;
-		Prac_5_Class_Diagram::MotionSensor* sensor;
+		 MotionSensor* sensor;
 
 	public:
 		Light();

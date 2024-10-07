@@ -4,25 +4,29 @@
 #include <iostream>
 #include <vector>
 #include "Device.h"
+#include "Light.h"
+#include "Thermostat.h"
+#include "LegacyThermostat.h"
+#include "DoorLock.h"
 using namespace std;
 
-namespace Prac_5_Class_Diagram {
-	class Sensor {
 
-	private:
-		Prac_5_Class_Diagram::Device* device;
+class Sensor {
 
-	public:
-		/// @brief Adds a devive to the sensor
-		/// @param device A pointer to the device that is to be added to the sensor
-		void addDevice(Prac_5_Class_Diagram::Device* device);
+private:
+	Device* device;
 
-		/// @brief Removes the device that is connected to the sensor
-		void removeDevice();
+public:
+	/// @brief Adds a devive to the sensor
+	/// @param device A pointer to the device that is to be added to the sensor
+	void addDevice(Device* device);
 
-		/// @brief Sends an update notification to the connected device
-		void notifyDevice();
-	};
-}
+	/// @brief Removes the device that is connected to the sensor
+	void removeDevice();
+
+	/// @brief Sends an update notification to the connected device
+	void notifyDevice();
+};
+
 
 #endif

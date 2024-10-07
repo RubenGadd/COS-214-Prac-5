@@ -3,13 +3,13 @@
 
 #include "Command.h"
 
-namespace Prac_5_Class_Diagram {
-	class TurnOffAllLights : public Prac_5_Class_Diagram::Command {
+
+class TurnOffAllLights : public  Command {
 
 
-	public:
-		void execute(HousePart * room);
-	};
-}
+public:
+	void execute(HousePart * room);
+};
+
 
 #endif

@@ -4,28 +4,28 @@
 
 using namespace std;
 
-namespace Prac_5_Class_Diagram {
-	class Component {
 
-	protected:
-		string name;
 
-	public:
-		Component(string n);
-		virtual string getStatus() = 0;
+class Component {
 
-		virtual string getDeviceType() = 0;
+protected:
+	string name;
 
-		virtual void performAction(bool OnOff, string deviceType) = 0;
+public:
+	Component(string n);
+	virtual string getStatus() = 0;
 
-		string getName();
+	virtual string getDeviceType() = 0;
 
-		virtual Component * getChildren(int index);
+	virtual void performAction(bool OnOff, string deviceType) = 0;
 
-		virtual void addChildren(Component* component);
+	string getName();
 
-		virtual void removeChildren(Component* component);
-	};
-}
+	virtual Component * getChildren(int index);
+
+	virtual void addChildren(Component* component);
+
+	virtual void removeChildren(Component* component);
+};
 
 #endif

@@ -1,8 +1,13 @@
 #ifndef MOTIONSENSOR_H
 #define MOTIONSENSOR_H
 
-namespace Prac_5_Class_Diagram {
-	class MotionSensor : Prac_5_Class_Diagram::Sensor {
+#include "Light.h"
+#include "Thermostat.h"
+#include "LegacyThermostat.h"
+#include "DoorLock.h"
+
+namespace   {
+	class MotionSensor : Sensor {
 	
 		private:
 			/// @brief True if motion is detected by the sensor and False if not

@@ -11,12 +11,12 @@
 using namespace std;
 
 
-namespace Prac_5_Class_Diagram {
+namespace   {
 	class MacroRoutine {
 
 	private:
 		string name;
-		list<Prac_5_Class_Diagram::Command*> procedures;
+		list< Command*> procedures;
 
 	public:
 		MacroRoutine(string n);

@@ -8,17 +8,17 @@
 
 #include <iostream>
 
-namespace Prac_5_Class_Diagram {
-	class State {
 
-	private:
-		string status;
+class State {
 
-	public:
-		State(string s);
-		string getStatus();
-		virtual void performAction(Prac_5_Class_Diagram::Device* device) = 0;
-	};
-}
+private:
+	string status;
+
+public:
+	State(string s);
+	string getStatus();
+	virtual void performAction( Device* device) = 0;
+};
+
 
 #endif

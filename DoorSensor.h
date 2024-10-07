@@ -2,20 +2,23 @@
 #define DOORSENSOR_H
 
 #include "Sensor.h"
+#include "Light.h"
+#include "Thermostat.h"
+#include "LegacyThermostat.h"
+#include "DoorLock.h"
 
-namespace Prac_5_Class_Diagram {
-	class DoorSensor : Prac_5_Class_Diagram::Sensor {
-	
-	private:
-		/// @brief The state of the door sensor (subject). True when the door is open and false if the door is closed
-		bool open;
+class DoorSensor : public Sensor {
 
-	public:
-		/// @brief The state of the door sensor (subject). True when the door is open and false if the door is closed
-		/// @return Boolean value of the state of the door sensor
-		bool getState();
-		bool setState(bool state);
-	};
-}
+private:
+	/// @brief The state of the door sensor (subject). True when the door is open and false if the door is closed
+	bool open;
+
+public:
+	/// @brief The state of the door sensor (subject). True when the door is open and false if the door is closed
+	/// @return Boolean value of the state of the door sensor
+	bool getState();
+	bool setState(bool state);
+};
+
 
 #endif

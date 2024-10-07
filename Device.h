@@ -11,24 +11,22 @@ using namespace std;
 
 
 
-namespace Prac_5_Class_Diagram {
-	class Device : public Component {
+class Device : public Component {
+
+protected:
+	State* state;
+public:
+	Device(string n);
 	
-	protected:
-		State* state;
-	public:
-		Device(string n);
-		
-		virtual void update() = 0;
+	virtual void update() = 0;
 
-		virtual string getDeviceType() = 0;
+	virtual string getDeviceType() = 0;
 
-		virtual string getStatus();
+	virtual string getStatus();
 
-		void performAction(bool OnOff, string deviceType);
+	void performAction(bool OnOff, string deviceType);
 
-		void setState(State * s);
-	};
-}
+	void setState(State * s);
+};
 
 #endif

@@ -9,27 +9,25 @@
 #include <list>
 
 using namespace std;
-using namespace Prac_5_Class_Diagram;
 
-namespace Prac_5_Class_Diagram {
-	class HousePart : public Component {
+class HousePart : public Component {
 
-	public:
-		list<Component*> children;
-		HousePart(string n);
-		~HousePart();
-		string getStatus();
+public:
+	list<Component*> children;
+	HousePart(string n);
+	~HousePart();
+	string getStatus();
 
-		string getDeviceType();
+	string getDeviceType();
 
-		void performAction(bool OnOff, string deviceType);
+	void performAction(bool OnOff, string deviceType);
 
-		Component* getChildren(int index);
+	Component* getChildren(int index);
 
-		void addChildren(Component* component);
+	void addChildren(Component* component);
 
-		void removeChildren(Component* component);
-	};
-}
+	void removeChildren(Component* component);
+};
+
 
 #endif
