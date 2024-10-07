@@ -16,7 +16,7 @@ class MacroRoutine {
 
 private:
 	string name;
-	list< Command*> procedures;
+	list<Command*> procedures;
 
 public:
 	MacroRoutine(string n);
