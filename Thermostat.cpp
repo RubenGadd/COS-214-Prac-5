@@ -1,21 +1,35 @@
 #include "Thermostat.h"
 
+Prac_5_Class_Diagram::Thermostat::Thermostat():Device("Thermostat"){}
+
 string Prac_5_Class_Diagram::Thermostat::getStatus() {
-	// TODO - implement Thermostat::getStatus
-	throw "Not yet implemented";
+	if(Device::getStatus() == "Active"){
+		return "On";
+	}else{
+		return "Off";
+	}
 }
 
 string Prac_5_Class_Diagram::Thermostat::getDeviceType() {
-	// TODO - implement Thermostat::getDeviceType
-	throw "Not yet implemented";
+	return this->name;
 }
 
 void Prac_5_Class_Diagram::Thermostat::performAction() {
-	// TODO - implement Thermostat::performAction
-	throw "Not yet implemented";
+	State * curr = this->state;
+	curr->performAction(this);
+	delete curr;
 }
 
 void Prac_5_Class_Diagram::Thermostat::update() {
 	// TODO - implement Thermostat::update
 	throw "Not yet implemented";
+}
+
+int Prac_5_Class_Diagram::Thermostat::getTemperature() {
+	return tempSetting;
+}
+
+void Prac_5_Class_Diagram::Thermostat::setTemperature(int temp)
+{
+	this->tempSetting = temp;
 }
