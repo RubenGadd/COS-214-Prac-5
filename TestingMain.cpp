@@ -7,6 +7,7 @@ using namespace std;
 #include "Thermometer.h"
 #include "DoorSensor.h"
 #include "MotionSensor.h"
+#include "MacroRoutine.h"
 
 int main(){
 
@@ -78,11 +79,13 @@ int main(){
     motionSensor->notifyDevice();
 
     //commands
-
-
+    cout << "COMMAND TESTING" << endl;
+    MacroRoutine* routine = new MacroRoutine("Goodnight");
+    routine->executeRoutine(house1.rooms[3]);
+    cout << "Goodnight routine completed" << endl;
 
     //finally, print the state of the home
-    // cout << house1.toString() << endl;
+    cout << house1.toString() << endl;
 
 
     return 0;
