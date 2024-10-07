@@ -26,11 +26,15 @@ string Light::getDeviceType() {
 
 
 void Light::update() {
-	sensorState = sensor->getState();
 
 	if(sensorState && this->getStatus() == "Off") {
-		cout << "Motion detected! Turn on the lights";
+		cout << "Motion detected! Turn on the lights" << endl;
 		this->performAction(true,"Light");
 		return;
 	}
+}
+
+void Light::move()
+{
+	this->sensorState = true;
 }

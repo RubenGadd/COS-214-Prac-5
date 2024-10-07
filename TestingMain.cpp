@@ -6,6 +6,7 @@ using namespace std;
 #include "Sensor.h"
 #include "Thermometer.h"
 #include "DoorSensor.h"
+#include "MotionSensor.h"
 
 int main(){
 
@@ -38,6 +39,9 @@ int main(){
     house1.rooms[2].getChildren(2)->performAction(true,"DoorLock");
     house1.rooms[3].getChildren(1)->performAction(true,"Thermostat");
 
+    house1.rooms[0].getChildren(0)->getStatus();
+    house1.rooms[0].getChildren(0)->getDeviceType();
+
     //set thermostat temperatures
     cout << "Modern thermometer:" << endl;
 
@@ -64,6 +68,14 @@ int main(){
     garageDoorSensor->setState(true);
     garageDoorSensor->notifyDevice();
 
+    //test motion detecting lights
+    cout << "LIGHT OBSERVER TESTING" << endl;
+    Light* light1 = dynamic_cast<Light*>(house1.rooms[1].getChildren(0));
+    MotionSensor* motionSensor = new MotionSensor();
+    light1->move();
+    motionSensor->addDevice(light1);
+    motionSensor->setState(true);
+    motionSensor->notifyDevice();
 
     //commands
 

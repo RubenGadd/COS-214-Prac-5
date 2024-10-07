@@ -20,6 +20,7 @@ class Light : public Device {
 		string getStatus();
 		string getDeviceType();
 		void update();
+		void move();
 };
 
 

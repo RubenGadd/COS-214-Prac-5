@@ -4,6 +4,7 @@
 #include "Device.h"
 #include "Thermometer.h"
 
+class Thermometer;
 
 class Thermostat : public Device {
 
