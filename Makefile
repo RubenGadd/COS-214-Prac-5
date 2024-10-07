@@ -1,9 +1,9 @@
 # Object files list
-ofiles = Active.o Inactive.o Command.o Component.o Device.o DoorLock.o DoorSensor.o House.o HousePart.o LegacyThermostat.o Light.o LockAllDoors.o MacroRoutine.o MotionSensor.o Sensor.o SmartThermostatIntegrator.o State.o Thermometer.o Thermostat.o TurnOffAllLights.o main.o
+ofiles = Active.o Inactive.o Command.o Component.o Device.o DoorLock.o DoorSensor.o House.o HousePart.o LegacyThermostat.o Light.o LockAllDoors.o MacroRoutine.o MotionSensor.o Sensor.o SmartThermostatIntegrator.o State.o Thermometer.o Thermostat.o TurnOffAllLights.o TestingMain.o
 
 # Executable target
-main: $(ofiles)
-	g++ -std=c++23 $(ofiles) -o main
+TestingMain: $(ofiles)
+	g++ -std=c++23 $(ofiles) -o TestingMain
 
 # Individual object file compilation
 Active.o: Active.cpp Active.h
@@ -66,24 +66,24 @@ Thermostat.o: Thermostat.cpp Thermostat.h
 TurnOffAllLights.o: TurnOffAllLights.cpp TurnOffAllLights.h
 	g++ -std=c++23 -c TurnOffAllLights.cpp -o TurnOffAllLights.o
 
-# Main compilation
-main.o: main.cpp
-	g++ -std=c++23 -c main.cpp -o main.o
+# TestingMain compilation
+TestingMain.o: TestingMain.cpp
+	g++ -std=c++23 -c TestingMain.cpp -o TestingMain.o
 
 # Run Valgrind to check for memory leaks
-valgrind: main
-	valgrind --tool=memcheck ./main --leak-check=full -v
+valgrind: TestingMain
+	valgrind --tool=memcheck ./TestingMain --leak-check=full -v
 
 # Coverage testing
 coverage:
-	rm -f *.o *.gcov *.gcda *.gcno *.gz *.json *.txt main
-	g++ -g --coverage *.cpp -o main
-	./main >> output.txt
+	rm -f *.o *.gcov *.gcda *.gcno *.gz *.json *.txt TestingMain
+	g++ -g --coverage *.cpp -o TestingMain
+	./TestingMain >> output.txt
 
 # Run the executable
-run: main
-	./main
+run: TestingMain
+	./TestingMain
 
 # Clean up generated files
 clean:
-	rm -f *.o *.gcov *.gcda *.gcno *.gz *.json *.txt main
+	rm -f *.o *.gcov *.gcda *.gcno *.gz *.json *.txt TestingMain
