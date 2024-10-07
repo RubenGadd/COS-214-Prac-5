@@ -20,6 +20,7 @@ private:
 
 public:
 	MacroRoutine(string n);
+	~MacroRoutine();
 	void addProcedure(Command * command);
 
 	void removeProcedure(Command * command);

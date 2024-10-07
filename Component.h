@@ -21,11 +21,11 @@ public:
 
 	string getName();
 
-	virtual Component * getChildren(int index);
+	virtual Component * getChildren(int index) = 0;
 
-	virtual void addChildren(Component* component);
+	virtual void addChildren(Component* component) = 0;
 
-	virtual void removeChildren(Component* component);
+	virtual void removeChildren(Component* component) = 0;
 };
 
 #endif

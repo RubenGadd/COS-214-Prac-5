@@ -28,6 +28,12 @@ public:
 	void performAction(bool OnOff, string deviceType);
 
 	void setState(State * s);
+
+	Component * getChildren(int index);
+
+	void addChildren(Component* component);
+
+	void removeChildren(Component* component);
 };
 
 #endif

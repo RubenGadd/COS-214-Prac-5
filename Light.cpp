@@ -1,4 +1,5 @@
 #include "Light.h"
+#include "MotionSensor.h"
 
 /// @brief Construct Light object and passes Light string as device name into Device's constructor
 Light::Light():Device("Light"){}

@@ -29,3 +29,16 @@ void Device::setState(State * s){
     delete this->state;
     this->state = s;
 }
+
+
+Component * Device::getChildren(int index){
+    return nullptr;
+}
+
+void Device::addChildren(Component* component){
+    return;
+}
+
+void Device::removeChildren(Component* component){
+    return;
+}

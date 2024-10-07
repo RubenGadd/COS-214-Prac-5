@@ -2,7 +2,9 @@
 #define LIGHT_H
 
 #include "Device.h"
-#include "MotionSensor.h"
+#include "Sensor.h"
+
+class MotionSensor;
 using namespace std;
 
 
