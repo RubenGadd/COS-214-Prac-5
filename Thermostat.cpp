@@ -25,14 +25,14 @@ string Thermostat::getDeviceType() {
 
 void Thermostat::update() {
 
-	sensorState = this->thermometer->getState();
-
 	if(sensorState == tempSetting) {  //if the room is hot/cold enough
 		cout << "The temperature is right, turn the heating/cooling off" << endl;
 		this->performAction(false,"Thermostat");  // maybe replace this with turnOn
 	}
-	else 
+	else {
+		cout << "The temperature is right, turning heating/cooling off" << endl;
 		this->performAction(true,"Thermostat");
+	}
 }
 
 int Thermostat::getTemperature() {
@@ -42,4 +42,13 @@ int Thermostat::getTemperature() {
 void Thermostat::setTemperature(int temp)
 {
 	this->tempSetting = temp;
+}
+
+void Thermostat::warmUp(int x) {
+	this->sensorState == x;
+}
+
+void Thermostat::setSensor(Thermometer *sensor)
+{
+	this->thermometer = sensor;
 }

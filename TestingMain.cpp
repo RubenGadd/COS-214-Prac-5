@@ -38,6 +38,9 @@ int main(){
     house1.rooms[0].getChildren(2)->performAction(true,"DoorLock");
     house1.rooms[1].getChildren(3)->performAction(true,"Thermostat");
     house1.rooms[2].getChildren(2)->performAction(true,"DoorLock");
+
+    house1.rooms[3].getChildren(1)->performAction(true,"Thermostat");
+    house1.rooms[3].getChildren(1)->performAction(false,"Thermostat");
     house1.rooms[3].getChildren(1)->performAction(true,"Thermostat");
 
     house1.rooms[0].getChildren(0)->getStatus();
@@ -72,11 +75,20 @@ int main(){
     //test motion detecting lights
     cout << "LIGHT OBSERVER TESTING" << endl;
     Light* light1 = dynamic_cast<Light*>(house1.rooms[1].getChildren(0));
-    MotionSensor* motionSensor = new MotionSensor();
     light1->move();
+    MotionSensor* motionSensor = new MotionSensor();
     motionSensor->addDevice(light1);
     motionSensor->setState(true);
     motionSensor->notifyDevice();
+
+    //test thermostat observer
+    cout << "THERMOSTAT OBSERVER TESTING" << endl;
+    Thermostat* device = dynamic_cast<Thermostat*>(house1.rooms[1].getChildren(3));
+    device->warmUp(18);
+    Thermometer* meter = new Thermometer();
+    meter->addDevice(device);
+    meter->setState(18);
+    meter->notifyDevice();
 
     //commands
     cout << "COMMAND TESTING" << endl;
@@ -85,7 +97,7 @@ int main(){
     cout << "Goodnight routine completed" << endl;
 
     //finally, print the state of the home
-    cout << house1.toString() << endl;
+    // cout << house1.toString() << endl;
 
 
     return 0;

@@ -7,7 +7,7 @@ void Sensor::addDevice( Device* device) {
 		return;
 	}
 
-	cout << "Added devive to sensor" << endl;
+	cout << "Added device to sensor" << endl;
 	this->device = device;
 }
 

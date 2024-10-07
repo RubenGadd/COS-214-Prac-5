@@ -15,7 +15,7 @@ class Thermometer : public Sensor {
 private:
 	/// @brief The temperature in the room measured by the thermomenter in °C
 	int temperature;
-	Thermostat* thermostat;
+	// Thermostat* thermostat;
 public:
 	/// @brief Accessor function for the temperature measured by the thermometer in °C
 	/// @return Temperature in °C
@@ -25,8 +25,6 @@ public:
 	/// @param temp The temperature in °C
 	void setState(int temp);
 
-	void addDevice(Thermostat* device);
 };
-
 
 #endif

@@ -33,6 +33,9 @@ public:
 	/// @brief Set the temperature setting from the legacy thermostat
 	/// @param temp The temperature in °C that the thermostat is to be set to
 	virtual void setTemperature(int temp);
+
+	void warmUp(int);
+	void setSensor(Thermometer* sensor);
 };
 
 
