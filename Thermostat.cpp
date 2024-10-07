@@ -24,8 +24,10 @@ void Prac_5_Class_Diagram::Thermostat::update() {
 
 	if(sensorState == tempSetting) {  //if the room is hot/cold enough
 		cout << "The temperature is right, turn the heating/cooling off" << endl;
-		this->performAction();  // maybe replace this with turnOn
+		this->performAction(false,"Thermostat");  // maybe replace this with turnOn
 	}
+	else 
+		this->performAction(true,"Thermostat");
 }
 
 int Prac_5_Class_Diagram::Thermostat::getTemperature() {

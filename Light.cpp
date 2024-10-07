@@ -25,6 +25,7 @@ void Prac_5_Class_Diagram::Light::update() {
 
 	if(sensorState && this->getStatus() == "On") {
 		cout << "Motion detected! Turn on the lights";
+		this->performAction(true,"Light");
 		return;
 	}
 }
