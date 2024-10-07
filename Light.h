@@ -16,6 +16,7 @@ class Light : public Device {
 
 	public:
 		Light();
+		~Light();
 		string getStatus();
 		string getDeviceType();
 		void update();

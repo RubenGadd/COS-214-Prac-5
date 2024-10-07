@@ -10,10 +10,11 @@ class Thermostat : public Device {
 private:
 	int sensorState; //the actual temperature of the room
 	int tempSetting; //the temperature the thermostat is set to
-		Thermometer* thermometer;
+	Thermometer* thermometer;
 
 public:
 	Thermostat();
+	~Thermostat();
 
 	/// @brief Accessor function for the state of the thermostat (if the thermostat is turned on or off)
 	/// @return String value "On" if the thermostat is on and "Off" if the thermostat is off 

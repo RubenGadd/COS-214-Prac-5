@@ -3,6 +3,10 @@
 /// @brief Construct Thermostat object and passes Thremostat string as device name into Device's constructor
 Thermostat::Thermostat():Device("Thermostat"){}
 
+Thermostat::~Thermostat(){
+	delete thermometer;
+}
+
 /// @brief Uses device's getStatus to get the name of the state veriable and returns a string giving the result but in terms of the device, eg Light's are On or Off
 /// @return Returns a string of the devices state
 string Thermostat::getStatus() {
