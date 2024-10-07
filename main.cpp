@@ -22,7 +22,7 @@ int main(){
 
     house1.addThermostat(1);
     house1.addThermostat(2);
-    house1.addThermostat(3);  //maybe this gets a legacy thermostat?
+    house1.addLegacyThermostat(3); 
 
     house1.addDoorLock(0);
     house1.addDoorLock(0);
@@ -31,15 +31,34 @@ int main(){
     house1.addDoorLock(2);
 
     //toggle some switches
-    Thermostat thr1;
-    thr1.performAction(true,"Thermostat");
-    cout << thr1.getStatus() << endl;
-    thr1.setTemperature(18);
-    cout << thr1.getTemperature() << endl;
+    house1.rooms[0].getChildren(0)->performAction(true,"Light");
+    house1.rooms[0].getChildren(2)->performAction(true,"DoorLock");
+    house1.rooms[1].getChildren(3)->performAction(true,"Thermostat");
+    house1.rooms[2].getChildren(2)->performAction(true,"DoorLock");
+    house1.rooms[3].getChildren(1)->performAction(true,"Thermostat");
+
+    //set thermostat temperatures
+    cout << "Modern thermometer:" << endl;
+
+    Thermostat* kitchenTherm = dynamic_cast<Thermostat*>(house1.rooms[1].getChildren(3));
+    kitchenTherm->setTemperature(18);
+    cout << "Kitchen thermometer temperature: " << kitchenTherm->getTemperature() << endl;
+
+    Thermostat* bedroomTherm = dynamic_cast<Thermostat*>(house1.rooms[2].getChildren(1));
+    bedroomTherm->setTemperature(25);
+    cout << "Main Bedroom thermometer temperature: " << bedroomTherm->getTemperature() << endl;
+
+    //set legacy thermometer temps
+    cout << "Legacy thermometer:" << endl;
+    Thermostat* loungeTherm = dynamic_cast<Thermostat*>(house1.rooms[3].getChildren(1));
+    loungeTherm->setTemperature(20);
+    cout << "Living Room thermometer temperature: \n" << loungeTherm->getTemperature() << endl;
+
+    
 
 
     //finally, print the state of the home
-    cout << house1.toString() << endl;
+    // cout << house1.toString() << endl;
 
     return 0;
 }

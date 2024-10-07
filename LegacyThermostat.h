@@ -11,6 +11,7 @@ class LegacyThermostat {
 		int temperature;
 
 	public:
+		LegacyThermostat();
 
 		/// @brief Accessor method for the current temperature setting of the legacy thermostat
 		/// @return The current temperature setting for the thermostat in °C

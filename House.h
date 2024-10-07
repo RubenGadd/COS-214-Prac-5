@@ -10,11 +10,13 @@ using namespace std;
 #include "Thermostat.h"
 #include "Light.h"
 #include "DoorLock.h"
+#include "LegacyThermostat.h"
+#include "SmartThermostatIntegrator.h"
 
 class House {
-	private:
-		vector<HousePart> rooms;
 	public:
+		vector<HousePart> rooms;
+
 		House(vector<string> roomsList);
 		HousePart getHousePart(int index);
         string toString();
@@ -22,6 +24,8 @@ class House {
 		void addThermostat(int);
 		void addLight(int);
 		void addDoorLock(int);
+
+		void addLegacyThermostat(int i);
 };
 
 #endif

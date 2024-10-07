@@ -12,10 +12,6 @@ HousePart House::getHousePart(int index) {
     return this->rooms[index];
 }
 
-void addThermostat(int index) {
-
-}
-
 string House::toString() {
     string out = "";
     for(int i=0; i<rooms.size(); i++)
@@ -37,3 +33,10 @@ void House::addDoorLock(int i) {
     Device* lock = new DoorLock();
     rooms[i].addChildren(lock);
 }
+
+void House::addLegacyThermostat(int i) {
+    LegacyThermostat* ltherm = new LegacyThermostat();
+    SmartThermostatIntegrator* integrator = new SmartThermostatIntegrator(*ltherm);
+    rooms[i].addChildren(integrator); 
+}
+

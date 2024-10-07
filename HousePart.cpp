@@ -90,7 +90,7 @@ void HousePart::performAction(bool OnOff, string deviceType) {
 					device->performAction(1, deviceType);
 				}
 			}else{
-				cout << "Invalid Device";
+				cout << "Invalid Device" << endl;
 				return;
 			}
 		}

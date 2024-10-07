@@ -7,7 +7,7 @@
 using namespace std;
 
 
-class SmartThermostatIntegrator :  Thermostat {
+class SmartThermostatIntegrator : public  Thermostat {
 
 private:
 		LegacyThermostat* legacyThermostat;
