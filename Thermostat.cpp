@@ -21,8 +21,12 @@ void Prac_5_Class_Diagram::Thermostat::performAction() {
 }
 
 void Prac_5_Class_Diagram::Thermostat::update() {
-	// TODO - implement Thermostat::update
-	throw "Not yet implemented";
+	sensorState = this->thermometer->getState();
+
+	if(sensorState == tempSetting) {  //if the room is hot/cold enough
+		cout << "The temperature is right, turn the heating/cooling off" << endl;
+		this->performAction();  // maybe replace this with turnOn
+	}
 }
 
 int Prac_5_Class_Diagram::Thermostat::getTemperature() {

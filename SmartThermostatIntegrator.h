@@ -13,6 +13,9 @@ namespace Prac_5_Class_Diagram {
 		Prac_5_Class_Diagram::LegacyThermostat* legacyThermostat;
 
 	public:
+
+		/// @brief Constructor that sets the adaptee to the adapter
+		/// @param legacyThermostat The adaptee
 		SmartThermostatIntegrator(LegacyThermostat legacyThermostat);
 		void setTemperature(int temp);
 		int getTemperature();

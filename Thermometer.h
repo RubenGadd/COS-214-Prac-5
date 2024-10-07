@@ -8,11 +8,17 @@ using namespace std;
 namespace Prac_5_Class_Diagram {
 	class Thermometer : public Sensor {
 
-	public:
+	private:
+		/// @brief The temperature in the room measured by the thermomenter in °C
 		int temperature;
 
+	public:
+		/// @brief Accessor function for the temperature measured by the thermometer in °C
+		/// @return Temperature in °C
 		int getState();
 
+		/// @brief Sets the temperature measured by the thermometer
+		/// @param temp The temperature in °C
 		void setState(int temp);
 	};
 }

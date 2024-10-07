@@ -10,14 +10,18 @@ namespace Prac_5_Class_Diagram {
 	class Sensor {
 
 	private:
-		vector<Prac_5_Class_Diagram::Device*> devices;
+		Prac_5_Class_Diagram::Device* device;
 
 	public:
-		void addDevice(Prac_5_Class_Diagram::Device device);
+		/// @brief Adds a devive to the sensor
+		/// @param device A pointer to the device that is to be added to the sensor
+		void addDevice(Prac_5_Class_Diagram::Device* device);
 
-		void removeDevice(Prac_5_Class_Diagram::Device devive);
+		/// @brief Removes the device that is connected to the sensor
+		void removeDevice();
 
-		void notifyDevices();
+		/// @brief Sends an update notification to the connected device
+		void notifyDevice();
 	};
 }
 

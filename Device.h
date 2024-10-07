@@ -17,7 +17,6 @@ namespace Prac_5_Class_Diagram {
 	protected:
 		State* state;
 	public:
-		
 		Device(string n);
 		
 		virtual void update() = 0;
