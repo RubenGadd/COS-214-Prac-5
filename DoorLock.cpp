@@ -1,23 +1,26 @@
 #include "DoorLock.h"
 
+Prac_5_Class_Diagram::DoorLock::DoorLock():Device("DoorLock"){}
+
 string Prac_5_Class_Diagram::DoorLock::getStatus() {
-	// TODO - implement DoorLock::getStatus
-	throw "Not yet implemented";
+	if(Device::getStatus() == "Active"){
+		return "Locked";
+	}else{
+		return "Unlocked";
+	}
 }
 
 string Prac_5_Class_Diagram::DoorLock::getDeviceType() {
-	// TODO - implement DoorLock::getDeviceType
-	throw "Not yet implemented";
+	return this->name;
 }
 
 void Prac_5_Class_Diagram::DoorLock::performAction() {
-	// TODO - implement DoorLock::performAction
-	throw "Not yet implemented";
+	State * curr = this->state;
+	curr->performAction(this);
+	delete curr;
 }
 
 void Prac_5_Class_Diagram::DoorLock::operation() {
-	// TODO - implement DoorLock::operation
-	throw "Not yet implemented";
 }
 
 void Prac_5_Class_Diagram::DoorLock::update() {

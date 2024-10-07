@@ -1,18 +1,23 @@
 #include "Light.h"
 
+Prac_5_Class_Diagram::Light::Light():Device("Light"){}
+
 string Prac_5_Class_Diagram::Light::getStatus() {
-	// TODO - implement Light::getStatus
-	throw "Not yet implemented";
+	if(Device::getStatus() == "Active"){
+		return "On";
+	}else{
+		return "Off";
+	}
 }
 
 string Prac_5_Class_Diagram::Light::getDeviceType() {
-	// TODO - implement Light::getDeviceType
-	throw "Not yet implemented";
+	return this->name;
 }
 
 void Prac_5_Class_Diagram::Light::performAction() {
-	// TODO - implement Light::performAction
-	throw "Not yet implemented";
+	State * curr = this->state;
+	curr->performAction(this);
+	delete curr;
 }
 
 void Prac_5_Class_Diagram::Light::update() {
