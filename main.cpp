@@ -3,6 +3,8 @@
 using namespace std;
 
 #include "House.h"
+#include "Sensor.h"
+#include "Thermometer.h"
 
 int main(){
 
@@ -29,10 +31,12 @@ int main(){
     house1.addDoorLock(2);
 
     //toggle some switches
-    house1.getHousePart(1).getChildren(0)->performAction(false,"DoorLock");
+    Thermostat thr1;
+    thr1.performAction(true,"Thermostat");
+    cout << thr1.getStatus() << endl;
+    thr1.setTemperature(18);
+    cout << thr1.getTemperature() << endl;
 
-    //make sensors and add devices to them
-    
 
     //finally, print the state of the home
     cout << house1.toString() << endl;

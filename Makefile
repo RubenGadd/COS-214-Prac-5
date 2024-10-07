@@ -72,7 +72,7 @@ main.o: main.cpp
 
 # Run Valgrind to check for memory leaks
 valgrind: main
-	valgrind --tool=memcheck ./main
+	valgrind --tool=memcheck ./main --leak-check=full -v
 
 # Coverage testing
 coverage:

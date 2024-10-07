@@ -11,12 +11,12 @@ void Active::performAction(Device* device) {
 	device->setState(newS);
 
 	if(device->getName() == "Light"){
-		cout << "Lights switched off";
+		cout << "Lights switched off" << endl;
 	}
 	else if(device->getName() == "Thermostat"){
-		cout << "Thermostat switched off";
+		cout << "Thermostat switched off" << endl;
 	}
 	else if(device->getName() == "DoorLock"){
-		cout << "Door lock switched off";
+		cout << "Door lock switched off" << endl;
 	}
 }

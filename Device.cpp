@@ -18,7 +18,7 @@ void Device::performAction(bool OnOff, string deviceType){
     if(name == deviceType){
         State * curr = this->state;
         curr->performAction(this);
-        delete curr;
+        // delete curr;
     }else{
         cout << "Wrong device selected";
     }
