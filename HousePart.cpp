@@ -14,7 +14,7 @@ HousePart::~HousePart(){
 /// @brief A summary is made of the HousePart children list based on the type of device whether the device is active or inactive, eg. number of lights on and off
 /// @return Returns a summary of the number of devices which are activated and Inactive based on the type of device
 string HousePart::getStatus() {
-	string out = "Status of Devices in room: \n";
+	string out = "Status of Devices in: "+name+"\n";
 	int doorLocked = 0;
 	int doorUnlocked = 0;
 	int lightOn = 0;

@@ -3,15 +3,25 @@
 
 #include <string>
 using namespace std;
-#include <list>
+#include <vector>
 #include "HousePart.h"
-#include "Component.h"	
+#include "Component.h"
+#include "Device.h"
+#include "Thermostat.h"
+#include "Light.h"
+#include "DoorLock.h"
+
 class House {
 	private:
-		list<HousePart*> rooms;
+		vector<HousePart> rooms;
 	public:
-		House(list<string> roomsList);
-};
+		House(vector<string> roomsList);
+		HousePart getHousePart(int index);
+        string toString();
 
+		void addThermostat(int);
+		void addLight(int);
+		void addDoorLock(int);
+};
 
 #endif
