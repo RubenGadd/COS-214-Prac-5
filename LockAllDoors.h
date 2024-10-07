@@ -6,7 +6,7 @@
 
 class LockAllDoors : public  Command {
 	public:
-		void execute(HousePart * room);
+		void execute(HousePart& room);
 };
 
 
