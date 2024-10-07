@@ -3,13 +3,14 @@
 
 namespace Prac_5_Class_Diagram {
 	class MotionSensor : Prac_5_Class_Diagram::Sensor {
-
-	public:
-		bool motionDetected;
-
-		bool getState();
-
-		void setState();
+	
+		private:
+			/// @brief True if motion is detected by the sensor and False if not
+			bool motionDetected;
+	
+		public:
+			bool getState();
+			void setState(bool state);
 	};
 }
 

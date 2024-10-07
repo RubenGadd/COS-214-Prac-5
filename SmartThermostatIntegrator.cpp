@@ -1,11 +1,15 @@
 #include "SmartThermostatIntegrator.h"
 
-void Prac_5_Class_Diagram::SmartThermostatIntegrator::setTemperature(int temp) {
-	// TODO - implement SmartThermostatIntegrator::setTemperature
-	throw "Not yet implemented";
+Prac_5_Class_Diagram::SmartThermostatIntegrator::SmartThermostatIntegrator(LegacyThermostat legacyThermostat)
+{
+	this->legacyThermostat = &legacyThermostat;
+}
+
+void Prac_5_Class_Diagram::SmartThermostatIntegrator::setTemperature(int temp)
+{
+    legacyThermostat->legacySetTemp(temp);
 }
 
 int Prac_5_Class_Diagram::SmartThermostatIntegrator::getTemperature() {
-	// TODO - implement SmartThermostatIntegrator::getTemperature
-	throw "Not yet implemented";
+	legacyThermostat->legacyGetTemp();
 }
