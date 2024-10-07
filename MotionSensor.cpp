@@ -6,5 +6,6 @@ bool MotionSensor::getState() {
 
 void MotionSensor::setState(bool state)
 {
+	getState();
 	this->motionDetected = state;
 }

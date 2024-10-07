@@ -12,7 +12,7 @@ using namespace std;
 int main(){
 
     //create some rooms and add them to a house
-    vector<string> rooms = {"Garage","Kitchen","MainBedroom","LivingRoom"};
+    vector<string> rooms = {"Garage","Kitchen","MainBedroom","LivingRoom","OutsideRoom"};
     House house1(rooms);
 
     //add devices to the rooms
@@ -45,6 +45,11 @@ int main(){
 
     house1.rooms[0].getChildren(0)->getStatus();
     house1.rooms[0].getChildren(0)->getDeviceType();
+
+    house1.addDoorLock(4);
+    Component* rem = house1.rooms[4].getChildren(0);
+    rem->getDeviceType();
+    house1.rooms[4].removeChildren(rem);
 
     //set thermostat temperatures
     cout << "Modern thermometer:" << endl;
@@ -89,6 +94,7 @@ int main(){
     meter->addDevice(device);
     meter->setState(18);
     meter->notifyDevice();
+    meter->removeDevice();
 
     //commands
     cout << "COMMAND TESTING" << endl;
