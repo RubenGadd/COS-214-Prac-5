@@ -2,9 +2,11 @@
 
 /// @brief Makes a house object with all of the rooms specified
 /// @param roomsList A list of all the rooms that should be in the house
-House::House(vector<string> roomsList){
+House::House(vector<string> roomsList):routines("Nightmode"){
     for(int i=0; i<roomsList.size(); i++)
         rooms.push_back(HousePart(roomsList[i]));
+    routines.addProcedure(new TurnOffAllLights());
+    routines.addProcedure(new LockAllDoors());
 }
 
 
@@ -40,3 +42,8 @@ void House::addLegacyThermostat(int i) {
     rooms[i].addChildren(integrator); 
 }
 
+void House::activateRoutine(){
+    for(HousePart& room : rooms){
+        routines.executeRoutine(room);
+    }
+}

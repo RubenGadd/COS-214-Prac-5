@@ -25,7 +25,7 @@ public:
 
 	void removeProcedure(Command * command);
 
-	void executeRoutine(HousePart * room);
+	void executeRoutine(HousePart& room);
 };
 
 

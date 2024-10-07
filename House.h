@@ -4,6 +4,7 @@
 #include <string>
 using namespace std;
 #include <vector>
+#include "MacroRoutine.h"
 #include "HousePart.h"
 #include "Component.h"
 #include "Device.h"
@@ -16,15 +17,14 @@ using namespace std;
 class House {
 	public:
 		vector<HousePart> rooms;
-
+		MacroRoutine routines;
 		House(vector<string> roomsList);
 		HousePart getHousePart(int index);
         string toString();
-
 		void addThermostat(int);
 		void addLight(int);
 		void addDoorLock(int);
-
+		void activateRoutine();
 		void addLegacyThermostat(int i);
 };
 

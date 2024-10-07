@@ -9,7 +9,7 @@ class Command {
 
 
 public:
-	virtual void execute(HousePart * room) = 0;
+	virtual void execute(HousePart& room) = 0;
 };
 
 

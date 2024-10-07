@@ -25,7 +25,7 @@ void MacroRoutine::removeProcedure(Command * command) {
 
 /// @brief This function execute all of the commands in the procedures list 1 by 1 on the room passed in
 /// @param room The room to which these procedures will apply and be executed on
-void MacroRoutine::executeRoutine(HousePart * room) {
+void MacroRoutine::executeRoutine(HousePart& room) {
 	for(auto * curr : procedures){
 		curr->execute(room);
 	}
