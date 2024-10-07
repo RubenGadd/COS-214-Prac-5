@@ -3,13 +3,13 @@
 
 #include "Command.h"
 
-namespace   {
-	class LockAllDoors : public  Command {
+
+class LockAllDoors : public  Command {
 
 
-	public:
-		void execute(HousePart * room);
-	};
-}
+public:
+	void execute(HousePart * room);
+};
+
 
 #endif

@@ -1,10 +1,10 @@
 #include "MotionSensor.h"
 
-bool  MotionSensor::getState() {
+bool MotionSensor::getState() {
 	return motionDetected;
 }
 
-void  MotionSensor::setState(bool state)
+void MotionSensor::setState(bool state)
 {
 	this->motionDetected = state;
 }

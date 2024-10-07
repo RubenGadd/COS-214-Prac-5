@@ -1,6 +1,6 @@
 #include "Sensor.h"
 
-void  Sensor::addDevice( Device* device) {
+void Sensor::addDevice( Device* device) {
 
 	if(this->device != NULL) {
 		cout << "There is already a device added to this sensor, you have to remove it first" << endl;
@@ -11,12 +11,12 @@ void  Sensor::addDevice( Device* device) {
 	this->device = device;
 }
 
-void  Sensor::removeDevice() {
+void Sensor::removeDevice() {
 	cout << "Removing device from sensor" << endl;
 	this->device = NULL;
 }
 
-void  Sensor::notifyDevice() {
+void Sensor::notifyDevice() {
 	cout << "Notifying device..." << endl;
 	this->device->update();
 }

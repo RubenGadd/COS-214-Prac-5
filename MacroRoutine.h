@@ -11,21 +11,21 @@
 using namespace std;
 
 
-namespace   {
-	class MacroRoutine {
 
-	private:
-		string name;
-		list< Command*> procedures;
+class MacroRoutine {
 
-	public:
-		MacroRoutine(string n);
-		void addProcedure(Command * command);
+private:
+	string name;
+	list< Command*> procedures;
 
-		void removeProcedure(Command * command);
+public:
+	MacroRoutine(string n);
+	void addProcedure(Command * command);
 
-		void executeRoutine(HousePart * room);
-	};
-}
+	void removeProcedure(Command * command);
+
+	void executeRoutine(HousePart * room);
+};
+
 
 #endif
