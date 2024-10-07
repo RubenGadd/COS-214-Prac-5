@@ -4,6 +4,7 @@
 
 #include "Component.h"
 #include "State.h"
+#include "Sensor.h"
 
 
 #include <string>
@@ -17,6 +18,7 @@ class Device : public Component {
 protected:
 	State* state;
 public:
+
 	Device(string n);
 	
 	virtual void update() = 0;

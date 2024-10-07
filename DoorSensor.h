@@ -2,6 +2,9 @@
 #define DOORSENSOR_H
 
 #include "Sensor.h"
+#include "DoorLock.h"
+
+class DoorLock ;
 
 
 class DoorSensor : public Sensor {
@@ -15,6 +18,8 @@ public:
 	/// @return Boolean value of the state of the door sensor
 	bool getState();
 	void setState(bool state);
+	void addDevice(DoorLock* lock);
+	void notifyDevice();
 };
 
 

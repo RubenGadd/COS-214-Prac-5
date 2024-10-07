@@ -5,6 +5,7 @@ using namespace std;
 #include "House.h"
 #include "Sensor.h"
 #include "Thermometer.h"
+#include "DoorSensor.h"
 
 int main(){
 
@@ -54,11 +55,23 @@ int main(){
     loungeTherm->setTemperature(20);
     cout << "Living Room thermometer temperature: \n" << loungeTherm->getTemperature() << endl;
 
-    
+    //open some doors
+    cout << "DOOR OBSERVER TESTING" << endl;
+    DoorLock* garageDoor1 = dynamic_cast<DoorLock*>(house1.rooms[0].getChildren(2));
+    DoorSensor* garageDoorSensor = new DoorSensor();
+    garageDoor1->operation();
+    garageDoorSensor->addDevice(garageDoor1);
+    garageDoorSensor->setState(true);
+    garageDoorSensor->notifyDevice();
+
+
+    //commands
+
 
 
     //finally, print the state of the home
     // cout << house1.toString() << endl;
+
 
     return 0;
 }

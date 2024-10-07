@@ -6,14 +6,16 @@
 #include "Active.h"
 #include "Inactive.h"
 
+class DoorSensor;
 
 class DoorLock : public Device {
 
 private:
 	bool observerState;
-		DoorSensor* sensor;
+	DoorSensor* sensor;
 
 public:
+
 	DoorLock();
 	string getStatus();
 
@@ -22,6 +24,8 @@ public:
 	void operation();
 
 	void update();
+
+	void setSensor(DoorSensor* sensor);
 };
 
 

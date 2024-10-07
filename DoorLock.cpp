@@ -19,13 +19,18 @@ string DoorLock::getDeviceType() {
 	return this->name;
 }
 
+/// @brief Opens the door if it is closed and visa versa
 void DoorLock::operation() {
+	if(this->observerState == false)
+		this->observerState = true;
+	else
+		this->observerState = false;
 }
 
 void DoorLock::update() {
-	observerState = sensor->getState();
+	cout << "Door lock updating..." << endl;
 
-	if(this->getStatus()=="Locked" && observerState) { //the door is locked but the door is open
+	if(this->getStatus()=="Locked" && observerState) { //the door is lunocked but the door is open
 		cout << "Raise the alarm, there is an intruder" << endl;
 		return;
 	}
@@ -33,3 +38,9 @@ void DoorLock::update() {
 	cout << "Lock scanned, everything looks good" << endl;
  
 }
+
+void DoorLock::setSensor(DoorSensor *sensor) {
+	this->sensor = sensor;
+}
+
+

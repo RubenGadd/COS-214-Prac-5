@@ -40,3 +40,6 @@ void House::addLegacyThermostat(int i) {
     rooms[i].addChildren(integrator); 
 }
 
+//macroRoutine->executeRoutine
+
+

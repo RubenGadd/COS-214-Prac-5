@@ -24,6 +24,7 @@ string Thermostat::getDeviceType() {
 }
 
 void Thermostat::update() {
+
 	sensorState = this->thermometer->getState();
 
 	if(sensorState == tempSetting) {  //if the room is hot/cold enough
