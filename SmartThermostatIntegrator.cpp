@@ -11,5 +11,5 @@ void  SmartThermostatIntegrator::setTemperature(int temp)
 }
 
 int  SmartThermostatIntegrator::getTemperature() {
-	legacyThermostat->legacyGetTemp();
+	return legacyThermostat->legacyGetTemp();
 }

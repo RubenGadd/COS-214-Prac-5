@@ -14,7 +14,7 @@ public:
 	/// @brief The state of the door sensor (subject). True when the door is open and false if the door is closed
 	/// @return Boolean value of the state of the door sensor
 	bool getState();
-	bool setState(bool state);
+	void setState(bool state);
 };
 
 
