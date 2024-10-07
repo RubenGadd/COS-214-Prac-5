@@ -93,11 +93,13 @@ int main(){
     //commands
     cout << "COMMAND TESTING" << endl;
     MacroRoutine* routine = new MacroRoutine("Goodnight");
-    routine->executeRoutine(house1.rooms[3]);
+    routine->addProcedure(new TurnOffAllLights());
+    routine->addProcedure(new LockAllDoors());
+    routine->executeRoutine(house1.rooms[2]);
     cout << "Goodnight routine completed" << endl;
 
     //finally, print the state of the home
-    // cout << house1.toString() << endl;
+    cout << house1.toString() << endl;
 
 
     return 0;
