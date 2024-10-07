@@ -10,7 +10,7 @@ void Prac_5_Class_Diagram::Inactive::performAction(Prac_5_Class_Diagram::Device*
 	else if(device->getName() == "Thermostat"){
 		cout << "Thermostat switched on";
 	}
-	else if(device->getName() == "Light"){
+	else if(device->getName() == "DoorLock"){
 		cout << "Door lock switched on";
 	}
 }

@@ -14,12 +14,6 @@ string Prac_5_Class_Diagram::DoorLock::getDeviceType() {
 	return this->name;
 }
 
-void Prac_5_Class_Diagram::DoorLock::performAction() {
-	State * curr = this->state;
-	curr->performAction(this);
-	delete curr;
-}
-
 void Prac_5_Class_Diagram::DoorLock::operation() {
 }
 

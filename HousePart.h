@@ -16,12 +16,13 @@ namespace Prac_5_Class_Diagram {
 
 	public:
 		list<Component*> children;
+		HousePart(string n);
 		~HousePart();
 		string getStatus();
 
 		string getDeviceType();
 
-		void performAction();
+		void performAction(bool OnOff, string deviceType);
 
 		Component* getChildren(int index);
 

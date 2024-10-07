@@ -1,4 +1,7 @@
 #include "HousePart.h"
+/// @brief Constructor receives a name, which is the name of the HousePart and construct the HousePart object
+/// @param n The name of the HousePart
+Prac_5_Class_Diagram::HousePart::HousePart(string n):Component(n){}
 
 /// @brief Destructs the HousePart Object, which is needed for the list
 Prac_5_Class_Diagram::HousePart::~HousePart(){
@@ -76,10 +79,33 @@ string Prac_5_Class_Diagram::HousePart::getDeviceType() {
 		 
 	return out;
 }
-
-void Prac_5_Class_Diagram::HousePart::performAction() {
-	// TODO - implement HousePart::performAction
-	throw "Not yet implemented";
+/// @brief This function takes in a bool which 1 states the device should be on and 0 means off and the deviceType states which devices this should apply to. 
+/// @param OnOff Parameter stating whether a device should be 1(on) or 0(Off)
+/// @param deviceType The Device to which this action is going to apply
+void Prac_5_Class_Diagram::HousePart::performAction(bool OnOff, string deviceType) {
+	if(OnOff == 1){
+		for( auto * device : children){
+			if(deviceType == device->getDeviceType()){
+				if(device->getStatus() == "Off" || device->getStatus() == "Unlocked"){
+					device->performAction(1, deviceType);
+				}
+			}else{
+				cout << "Invalid Device";
+				return;
+			}
+		}
+	}else{
+		for( auto * device : children){
+			if(deviceType == device->getDeviceType()){
+				if(device->getStatus() == "On" || device->getStatus() == "Locked"){
+					device->performAction(0, deviceType);
+				}
+			}else{
+				cout << "Invalid Device";
+				return;
+			}
+		}
+	}
 }
 
 /// @brief It returns the component at the index passed in 

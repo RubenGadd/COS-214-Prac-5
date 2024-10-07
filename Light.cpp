@@ -14,11 +14,6 @@ string Prac_5_Class_Diagram::Light::getDeviceType() {
 	return this->name;
 }
 
-void Prac_5_Class_Diagram::Light::performAction() {
-	State * curr = this->state;
-	curr->performAction(this);
-	delete curr;
-}
 
 void Prac_5_Class_Diagram::Light::update() {
 	// TODO - implement Light::update
