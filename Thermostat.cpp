@@ -24,3 +24,12 @@ void Prac_5_Class_Diagram::Thermostat::update() {
 	// TODO - implement Thermostat::update
 	throw "Not yet implemented";
 }
+
+int Prac_5_Class_Diagram::Thermostat::getTemperature() {
+	return tempSetting;
+}
+
+void Prac_5_Class_Diagram::Thermostat::setTemperature(int temp)
+{
+	this->tempSetting = temp;
+}

@@ -8,7 +8,8 @@ namespace Prac_5_Class_Diagram {
 	class Thermostat : public Device {
 
 	private:
-		int* sensorState;
+		int* sensorState; //the actual temperature of the room
+		int tempSetting; //the temperature the thermostat is set to
 		Prac_5_Class_Diagram::Sensor* sensor;
 
 	public:
@@ -21,9 +22,9 @@ namespace Prac_5_Class_Diagram {
 
 		void update();
 
-		virtual int getTemperature() = 0;
+		virtual int getTemperature(); //get the current temp setting from the legacy thermostat
 
-		virtual void setTemperature(int temp) = 0;
+		virtual void setTemperature(int temp); //set the temp setting from the legacy thermostat
 	};
 }
 

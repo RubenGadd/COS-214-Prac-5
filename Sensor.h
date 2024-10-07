@@ -1,11 +1,16 @@
 #ifndef SENSOR_H
 #define SENSOR_H
 
+#include <iostream>
+#include <vector>
+#include "Device.h"
+using namespace std;
+
 namespace Prac_5_Class_Diagram {
 	class Sensor {
 
 	private:
-		Vector<Prac_5_Class_Diagram::Device*> devices;
+		vector<Prac_5_Class_Diagram::Device*> devices;
 
 	public:
 		void addDevice(Prac_5_Class_Diagram::Device device);
