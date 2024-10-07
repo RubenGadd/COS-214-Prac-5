@@ -10,14 +10,12 @@ namespace Prac_5_Class_Diagram {
 
 	private:
 		bool sensorState;
-		Prac_5_Class_Diagram::Sensor* sensor;
+		Prac_5_Class_Diagram::MotionSensor* sensor;
 
 	public:
 		Light();
 		string getStatus();
-
 		string getDeviceType();
-
 		void update();
 	};
 }

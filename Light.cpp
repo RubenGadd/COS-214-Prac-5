@@ -21,6 +21,10 @@ string Prac_5_Class_Diagram::Light::getDeviceType() {
 
 
 void Prac_5_Class_Diagram::Light::update() {
-	// TODO - implement Light::update
-	throw "Not yet implemented";
+	sensorState = sensor->getState();
+
+	if(sensorState && this->getStatus() == "On") {
+		cout << "Motion detected! Turn on the lights";
+		return;
+	}
 }

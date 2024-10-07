@@ -23,6 +23,13 @@ void Prac_5_Class_Diagram::DoorLock::operation() {
 }
 
 void Prac_5_Class_Diagram::DoorLock::update() {
-	// TODO - implement DoorLock::update
-	throw "Not yet implemented";
+	observerState = sensor->getState();
+
+	if(this->getStatus()=="Locked" && observerState) { //the door is locked but the door is open
+		cout << "Raise the alarm, there is an intruder" << endl;
+		return;
+	}
+
+	cout << "Lock scanned, everything looks good" << endl;
+ 
 }

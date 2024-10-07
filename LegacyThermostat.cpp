@@ -1,11 +1,11 @@
 #include "LegacyThermostat.h"
 
 int Prac_5_Class_Diagram::LegacyThermostat::legacyGetTemp() {
-	// TODO - implement LegacyThermostat::legacyGetTemp
-	throw "Not yet implemented";
+	cout << "Getting temperature from legacy device..." << endl;
+	return temperature;
 }
 
 void Prac_5_Class_Diagram::LegacyThermostat::legacySetTemp(int temp) {
-	// TODO - implement LegacyThermostat::legacySetTemp
-	throw "Not yet implemented";
+	cout << "Setting temperature of legacy device..." << endl;
+	this->temperature = temp;
 }
