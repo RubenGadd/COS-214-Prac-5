@@ -2,10 +2,7 @@
 #define DOORSENSOR_H
 
 #include "Sensor.h"
-#include "Light.h"
-#include "Thermostat.h"
-#include "LegacyThermostat.h"
-#include "DoorLock.h"
+
 
 class DoorSensor : public Sensor {
 

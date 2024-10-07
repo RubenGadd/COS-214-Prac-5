@@ -1,14 +1,11 @@
 #ifndef INACTIVE_H
 #define INACTIVE_H
 
-#include "State.h"
-#include "Active.h"
-#include "Device.h"
-#include "Light.h"
-#include "Thermostat.h"
-#include "LegacyThermostat.h"
-#include "DoorLock.h"
 
+#include "Device.h"
+#include "State.h"
+
+class Active;
 
 class Inactive : public State {
 	public:

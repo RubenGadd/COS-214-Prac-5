@@ -1,4 +1,5 @@
 #include "Inactive.h"
+#include "Active.h"
 
 /// @brief Passes Inactive into State as the State name
 Inactive::Inactive():State("Inactive"){}

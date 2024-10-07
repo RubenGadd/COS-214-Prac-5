@@ -1,13 +1,11 @@
 #ifndef STATE_H
 #define STATE_H
 
-#include "Device.h"
-#include "Light.h"
-#include "Thermometer.h"
-#include "DoorLock.h"
-
+using namespace std;
+#include <string>
 #include <iostream>
 
+class Device;
 
 class State {
 
@@ -16,7 +14,7 @@ private:
 
 public:
 	State(string s);
-	string getStatus();
+	string getStatus() const;
 	virtual void performAction( Device* device) = 0;
 };
 

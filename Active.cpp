@@ -1,4 +1,5 @@
 #include "Active.h"
+#include "Inactive.h"
 
 /// @brief Passes Active into State as the State name
 Active::Active():State("Active"){}
@@ -18,5 +19,4 @@ void Active::performAction(Device* device) {
 	else if(device->getName() == "DoorLock"){
 		cout << "Door lock switched off";
 	}
-	//delete this;
 }

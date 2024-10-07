@@ -7,7 +7,7 @@
 #include "DoorLock.h"
 
 
-class MotionSensor : Sensor {
+class MotionSensor : public Sensor {
 
 	private:
 		/// @brief True if motion is detected by the sensor and False if not

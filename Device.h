@@ -1,15 +1,16 @@
 #ifndef DEVICE_H
 #define DEVICE_H
 
-#include <string>
+
 #include "Component.h"
-using namespace std;
 #include "State.h"
-#include "Active.h"
-#include "Inactive.h"
-#include "Sensor.h"
 
 
+#include <string>
+class Inactive;
+class Active;
+
+using namespace std;
 
 class Device : public Component {
 

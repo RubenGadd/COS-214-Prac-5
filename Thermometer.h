@@ -2,6 +2,7 @@
 #define THERMOMETER_H
 
 #include "Sensor.h"
+
 #include <iostream>
 using namespace std;
 

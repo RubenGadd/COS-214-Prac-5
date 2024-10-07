@@ -6,6 +6,6 @@ State::State(string n):status(n){}
 
 /// @brief Returns the name of the States object and so the Status
 /// @return Returns a string which the the name of the State object
-string  State::getStatus() {
+string  State::getStatus() const{
 	return status;
 }
