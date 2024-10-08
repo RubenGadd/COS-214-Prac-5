@@ -42,6 +42,8 @@ void House::addLegacyThermostat(int i) {
     rooms[i].addChildren(integrator); 
 }
 
-//macroRoutine->executeRoutine
-
-
+void House::activateRoutine(){
+    for(HousePart& room : rooms){
+        routines.executeRoutine(room);
+    }
+}
