@@ -7,6 +7,9 @@ Device::Device(string n) : Component(n){
     this->state = new Inactive();
 }
 
+Device::~Device(){
+    delete state;
+}
 
 /// @brief Returns the name of the State object which is "Active" or "Inactive"
 /// @return Returns a string which is the name of the State object

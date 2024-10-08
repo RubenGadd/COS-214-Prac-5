@@ -20,6 +20,7 @@ protected:
 public:
 
 	Device(string n);
+	~Device();
 	
 	virtual void update() = 0;
 

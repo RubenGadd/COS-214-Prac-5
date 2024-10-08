@@ -13,7 +13,7 @@ private:
 		LegacyThermostat* legacyThermostat;
 
 public:
-
+	~SmartThermostatIntegrator();
 	/// @brief Constructor that sets the adaptee to the adapter
 	/// @param legacyThermostat The adaptee
 	SmartThermostatIntegrator(LegacyThermostat legacyThermostat);

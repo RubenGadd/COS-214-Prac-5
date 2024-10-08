@@ -16,6 +16,7 @@ class Sensor {
 	public:
 		/// @brief Adds a devive to the sensor
 		/// @param device A pointer to the device that is to be added to the sensor
+		virtual ~Sensor();
 		virtual void addDevice(Device* device);
 
 		/// @brief Removes the device that is connected to the sensor

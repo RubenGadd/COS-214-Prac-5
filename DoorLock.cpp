@@ -3,6 +3,10 @@
 /// @brief Construct DoorLock object and passes DoorLock string as device name into Device's constructor
 DoorLock::DoorLock():Device("DoorLock"){}
 
+DoorLock::~DoorLock(){
+	delete sensor;
+}
+
 /// @brief Uses device's getStatus to get the name of the state veriable and returns a string giving the result but in terms of the device, eg Light's are On or Off
 /// @return Returns a string of the devices state
 string DoorLock::getStatus() {
