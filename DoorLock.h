@@ -17,6 +17,7 @@ private:
 public:
 
 	DoorLock();
+	~DoorLock();
 	string getStatus();
 
 	string getDeviceType();

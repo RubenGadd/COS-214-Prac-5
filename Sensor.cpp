@@ -1,5 +1,9 @@
 #include "Sensor.h"
 
+Sensor::~Sensor(){
+	delete device;
+}
+
 void Sensor::addDevice( Device* device) {
 
 	if(this->device != NULL) {

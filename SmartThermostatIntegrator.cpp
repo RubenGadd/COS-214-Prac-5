@@ -1,5 +1,9 @@
 #include "SmartThermostatIntegrator.h"
 
+SmartThermostatIntegrator::~SmartThermostatIntegrator(){
+	delete legacyThermostat;
+}
+
  SmartThermostatIntegrator::SmartThermostatIntegrator(LegacyThermostat legacyThermostat)
 {
 	this->legacyThermostat = &legacyThermostat;
