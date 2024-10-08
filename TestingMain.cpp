@@ -107,6 +107,12 @@ int main(){
     //finally, print the state of the home
     cout << house1.toString() << endl;
 
+    delete routine;
+    delete meter;
+    delete motionSensor;
+    delete garageDoorSensor;
+    delete rem;
+
 
     return 0;
 }
